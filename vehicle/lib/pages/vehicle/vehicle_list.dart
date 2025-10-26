@@ -14,6 +14,7 @@ class VehicleList extends StatelessWidget {
   //2 метода, 1 вернёт лист, а второй кнопку
   Widget _list() {
     return ListView.separated(
+        padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
         itemBuilder: (BuildContext context, int index) {
           return Container(height: 64, color: surfaceColor);
         },
