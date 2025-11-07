@@ -28,26 +28,44 @@ class VehicleItem extends StatelessWidget {
   }
 
   Widget _title() {
-    return const Padding(
-      padding: EdgeInsets.only(left: 6, right: 6),
+    return Padding(
+      padding: const EdgeInsets.only(left: 6, right: 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
+          const Text(
             'BMW GS-7638',
             style: TextStyle(
                 color: secondaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w600),
           ),
-          Text(
-            'No driver',
-            style: TextStyle(
-                color: secondaryVariantColor,
-                fontSize: 14,
-                fontWeight: FontWeight.w400),
-          ),
+          if (false)
+            // ignore: dead_code
+            const Text(
+              'No driver',
+              style: TextStyle(
+                  color: secondaryVariantColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400),
+            )
+          else
+            RichText(
+              text: const TextSpan(
+                  style: TextStyle(fontSize: 14),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'Driver: ',
+                        style: TextStyle(
+                            color: secondaryVariantColor,
+                            fontWeight: FontWeight.w400)),
+                    TextSpan(
+                        text: 'Paul',
+                        style: TextStyle(
+                            color: secondaryColor, fontWeight: FontWeight.w600))
+                  ]),
+            )
         ],
       ),
     );
