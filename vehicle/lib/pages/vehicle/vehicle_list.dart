@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:vehicle/design/colors.dart';
+import 'package:vehicle/pages/vehicle/vehicle_item.dart';
 
 class VehicleList extends StatelessWidget {
   const VehicleList({super.key});
@@ -16,7 +17,7 @@ class VehicleList extends StatelessWidget {
     return ListView.separated(
         padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
         itemBuilder: (BuildContext context, int index) {
-          return Container(height: 64, color: surfaceColor);
+          return const VehicleItem();
         },
         separatorBuilder: (BuildContext context, int index) {
           return const SizedBox(
